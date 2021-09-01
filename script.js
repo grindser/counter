@@ -1,8 +1,23 @@
-const end= new Date()
-const start = new Date(2021, 8, 30, 20, 13)
+const start = new Date(2021, 7, 30, 20, 13);
 
-var diff = end.getTime() - start.getTime() / (1000 * 3600 * 24;
-console.log(diff)
-                                              
-// To calculate the no. of days between two dates
-// var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+function r() {
+  const end = new Date();
+
+  let diff = end.getTime() - start.getTime();
+  let diffsec = Math.floor(diff / 1000);
+
+  document.getElementById("output").innerHTML = format(diffsec);
+}
+var t = setInterval(r, 1000);
+
+function format(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+    r();
+  },
+  false
+);

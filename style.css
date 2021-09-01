@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+:root {
+  --darker: #0f2231;
+  --dark: #182f40;
+  --neutral: #314555;
+  --light: #4b6372;
+  --ligher: #738993;
+}
+body {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 300;
+  font-size: 3.125rem;
+  line-height: 1.6;
+  background-color: var(--darker);
+  color: var(--dark);
+  text-align: center;
+  margin-top: 7%;
+}
+mark {
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 0.2vh;
+}
+p {
+  font-size: 2rem;
+}
